@@ -1,0 +1,10 @@
+CREATE database shop;
+CREATE USER 'cadt'@'%' IDENTIFIED BY 'password123';
+GRANT ALL PRIVILEGES ON shop.* TO 'cadt'@'%';
+
+IMPORT: database.sql
+FILE: shop.js
+npm init -y
+npm install express mysql2
+
+node shop.js
